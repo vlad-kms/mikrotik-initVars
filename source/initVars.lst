@@ -128,8 +128,21 @@
 :set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"url") "https://api.selectel.ru/domains/v1"
 #:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"maxReadRecordsDNS") [:tonum 150]
 
-
+    ########################################
     ### global parameteres for mail ###########################
+    #   Переменные для отправки почты
+    #   Используется в функции initOnStart::sendEmail
+    ########################################
+    # SMTP сервер
+:global smtpserv "smtp.mail.ru";
+    # Учетка на SMTP сервере
+:global Eaccount "avv.ping@mail.ru";
+    # Пароль от учетки на SMTP сервере
+:global pass "VFZUA4W0NvSxAVrdPtgP";
+    # Порт на SMTP сервере
+:global port 465;
+    # Использовать ли TLS на SMTP сервере
+:global tls tls-only;
 #:global smtpserv "smtp.gmail.com";
 #:global Eaccount "vvalexeev69@gmail.com";
 #:global pass "{GbPlTw}1";
@@ -138,16 +151,27 @@
 #:global Eaccount "vvalexeev69@yandex.ru";
 #:global pass "Ov03YnKL9zx";
 #:global port 465;
-:global smtpserv "smtp.mail.ru";
-:global Eaccount "avv.ping@mail.ru";
-:global pass "VFZUA4W0NvSxAVrdPtgP";
-:global port 465;
-:global tls tls-only;
 
-    ### Variables for local (home network) DNS
+    ########################################
+    #   HASHTABLE переменная.
+    #   [
+    #       'server'=[]
+    #       'keyname'=[]
+    #       'tsig'=[]
+    #       'zone'=[]
+    #       'ttl' - ttl
+    #   ]
+    #   HASHTABLE с данными для обновления записей в локальном DNS сервере.
+    #   Используется в локальном DHCP сервере для обновления записей DNS локального
+    ########################################
 :global homeDNS [:toarray ""]
+    # IP адрес локального DNS сервера
 :set ($homeDNS->"server") 192.168.15.97
+    # имя TSIG ключа, авторизованного для данного сервера
 :set ($homeDNS->"keyName") "home-lan-key"
-:set ($homeDNS->"tsig") "zz+sz6OIWJ6KQfl3QLKKKg=="
+    # TSIG ключ
+:set ($homeDNS->"tsig") "<TSIG KEY>"
+    # локальная зона (домен)
 :set ($homeDNS->"zone") "home.lan"
+    # ttl для записи
 :set ($homeDNS->"ttl") 300
