@@ -1,0 +1,90 @@
+### initVars
+
+#################################
+#     initialization of globals variables
+#################################
+
+:global islog; :set islog false;
+:global islogFunc; :set islogFunc false;
+:global alwaysEnableInterfaces [:toarray "pppoe-rtc"];
+#:global ddnsInterfaces [:toarray "pppoe-rtc,l2tp-beeline"]
+:global ddnsInterfaces [:toarray "pppoe-rtc"]
+
+:global ddnsInterfacesParamsDef [:toarray ""]
+:set ($ddnsInterfacesParamsDef->"default") [:toarray ""]
+:set ($ddnsInterfacesParamsDef->"default"->"url") "https://apidns.mrovo.ru/dns"
+:set ($ddnsInterfacesParamsDef->"default"->"user") "avv"
+:set ($ddnsInterfacesParamsDef->"default"->"password") "%7BGbPlTw%7D"
+:set ($ddnsInterfacesParamsDef->"default"->"maxReadRecordsDNS") [:tonum 1000]
+#:set ($ddnsInterfacesParamsDef->"pppoe-rtc") [:toarray ""]
+#:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"hostname") "hk.av-kms.ru"
+#:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"sendEmail") Yes
+#:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"domain") "av-kms.ru"
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc") [:toarray ""]
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"hostname") "hk.av-kms.ru"
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"domain") "av-kms.ru"
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"sendEmail") Yes
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"typeDNS") "SELeCTeL"
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"checkBogon") false
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"checkActive") true
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"password") "THRFF9zbehiMSECrtYRKTCGTi_218200"
+:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"url") "https://api.selectel.ru/domains/v1"
+#:set ($ddnsInterfacesParamsDef->"pppoe-rtc"->"maxReadRecordsDNS") [:tonum 150]
+:set ($ddnsInterfacesParamsDef->"l2tp-kms") [:toarray ""]
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"hostname") "test-hk.mrovo.ru"
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"domain") "mrovo.ru"
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"sendEmail") Yes
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"typeDNS") "SELeCTeL"
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"checkBogon") false
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"checkActive") true
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"password") "THRFF9zbehiMSECrtYRKTCGTi_218200"
+:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"url") "https://api.selectel.ru/domains/v1"
+#:set ($ddnsInterfacesParamsDef->"l2tp-kms"->"maxReadRecordsDNS") [:tonum 150]
+:set ($ddnsInterfacesParamsDef->"ether8-test") [:toarray ""]
+:set ($ddnsInterfacesParamsDef->"ether8-test"->"hostname") "test-hk.mrovo.ru"
+:set ($ddnsInterfacesParamsDef->"ether8-test"->"domain") "mrovo.ru"
+:set ($ddnsInterfacesParamsDef->"ether8-test"->"sendEmail") Yes
+:set ($ddnsInterfacesParamsDef->"ether8-test"->"typeDNS") "SELeCTeL"
+:set ($ddnsInterfacesParamsDef->"ether8-test"->"checkBogon") false
+:set ($ddnsInterfacesParamsDef->"ether8-test"->"checkActive") false
+
+:global ddnsInterfacesParamsTwo [:toarray ""]
+:set ($ddnsInterfacesParamsTwo->"default") [:toarray ""]
+:set ($ddnsInterfacesParamsTwo->"default"->"url") "https://apidns.mrovo.ru/dns"
+:set ($ddnsInterfacesParamsTwo->"default"->"user") "avv"
+:set ($ddnsInterfacesParamsTwo->"default"->"password") "%7BGbPlTw%7D"
+:set ($ddnsInterfacesParamsTwo->"default"->"maxReadRecordsDNS") [:tonum 1000]
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc") [:toarray ""]
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"hostname") "hk.mrovo.ru"
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"domain") "mrovo.ru"
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"sendEmail") Yes
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"typeDNS") "SELeCTeL"
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"checkBogon") false
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"checkActive") true
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"password") "THRFF9zbehiMSECrtYRKTCGTi_218200"
+:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"url") "https://api.selectel.ru/domains/v1"
+#:set ($ddnsInterfacesParamsTwo->"pppoe-rtc"->"maxReadRecordsDNS") [:tonum 150]
+
+
+### global parameteres for mail ###########################
+#:global smtpserv "smtp.gmail.com";
+#:global Eaccount "vvalexeev69@gmail.com";
+#:global pass "{GbPlTw}1";
+#:global port 587;
+#:global smtpserv "smtp.yandex.ru";
+#:global Eaccount "vvalexeev69@yandex.ru";
+#:global pass "Ov03YnKL9zx";
+#:global port 465;
+:global smtpserv "smtp.mail.ru";
+:global Eaccount "avv.ping@mail.ru";
+:global pass "VFZUA4W0NvSxAVrdPtgP";
+:global port 465;
+:global tls tls-only;
+
+### Variables for local (home network) DNS
+:global homeDNS [:toarray ""]
+:set ($homeDNS->"server") 192.168.15.97
+:set ($homeDNS->"keyName") "home-lan-key"
+:set ($homeDNS->"tsig") "zz+sz6OIWJ6KQfl3QLKKKg=="
+:set ($homeDNS->"zone") "home.lan"
+:set ($homeDNS->"ttl") 300
