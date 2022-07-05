@@ -166,7 +166,7 @@
     ########################################
 :global homeDNS [:toarray ""]
     # IP адрес локального DNS сервера
-:set ($homeDNS->"server") 192.168.15.97
+:set ($homeDNS->"server") 192.168.115.97
     # имя TSIG ключа, авторизованного для данного сервера
 :set ($homeDNS->"keyName") "home-lan-key"
     # TSIG ключ
