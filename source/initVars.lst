@@ -134,21 +134,21 @@
     #   Используется в функции initOnStart::sendEmail
     ########################################
     # SMTP сервер
-:global smtpserv "smtp.mail.ru";
+:global smtpserv "smtp SREVER";
     # Учетка на SMTP сервере
-:global Eaccount "avv.ping@mail.ru";
+:global Eaccount "YUOR EMAIL";
     # Пароль от учетки на SMTP сервере
 :global pass "<SMTP PASSWORD>";
     # Порт на SMTP сервере
 :global port 465;
     # Использовать ли TLS на SMTP сервере
 :global tls tls-only;
-#:global smtpserv "smtp.gmail.com";
-#:global Eaccount "vvalexeev69@gmail.com";
+#:global smtpserv "SMTP SERVER";
+#:global Eaccount "YOUR EMAIL";
 #:global pass "SMTP PASSWORD";
 #:global port 587;
-#:global smtpserv "smtp.yandex.ru";
-#:global Eaccount "vvalexeev69@yandex.ru";
+#:global smtpserv "smtp SERVER";
+#:global Eaccount "YOUR EMAIL";
 #:global pass "SMTP PASSWORD";
 #:global port 465;
 
